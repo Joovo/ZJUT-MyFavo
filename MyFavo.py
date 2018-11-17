@@ -89,7 +89,10 @@ def vote2(session,no,cookie):
 if __name__ == '__main__':
     for no in range(201626810101,201626811630):
         try:
-            no = '201626810411'
+            # depend by yourself
+            if n%100>50:
+                continue
+            no = str(no)
             pwd = no[-6:]
             session=requests.session()
             session,cookies=login(session,no,pwd)
